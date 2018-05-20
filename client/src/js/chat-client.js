@@ -69,7 +69,7 @@ window.chatClient = (function () {
         $('.video>.me').html('');
         $('.video>.me').append(localVideo);
         localVideo.srcObject = localMediaStream;
-        localVideo.controls = true;
+        //localVideo.controls = true;
         localVideo.play();
       })
       .catch(function (err) {
@@ -157,9 +157,9 @@ window.chatClient = (function () {
       $('.video>.stranger').append(strangerVideo);
       
       strangerVideo.srcObject = remoteMediaStream;
-      strangerVideo.controls = true;
+      //strangerVideo.controls = true;
       setTimeout(function () {
-        if (strangerVideo[0].paused) {
+        if (strangerVideo.paused) {
           strangerVideo.play();
         }
       }, 200);
